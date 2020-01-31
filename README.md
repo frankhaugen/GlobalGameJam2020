@@ -1,11 +1,11 @@
 # Concept
 Elements
-> Repair
-  > To make something whole again
-> Put onesself toghther
-  > Find parts around the world / level
-> Parts
-  > Torsoe, Arms, Legs, Head, Hearth and ?????
+- Repair
+  - To make something whole again
+- Put onesself toghther
+  - Find parts around the world / level
+- Parts
+  - Torsoe, Arms, Legs, Head, Hearth and ?????
 > Robot / andoird
   > Robot can be any shape, even non-human
   > Android is allways shaped like a human, but still a robot
