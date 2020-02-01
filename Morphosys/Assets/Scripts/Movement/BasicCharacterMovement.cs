@@ -20,6 +20,9 @@ public class BasicCharacterMovement : MonoBehaviour
     [Range(10.0f, 100.0f)]
     public float JumpForceMultiplier = 10.0f;
 
+    [Range(10.0f, 100.0f)]
+    public float MaxSpeed = 10.0f;
+
     private void Start()
     {
         Character = GetComponent<Rigidbody2D>();
@@ -59,11 +62,11 @@ public class BasicCharacterMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (IsDKeyDown && !IsInAir)
+        if (IsDKeyDown && !IsInAir && Character.velocity.x < MaxSpeed)
         {
             Character.AddForce(Vector2.right * SpeedForceMultiplier, ForceMode2D.Force);
         }
-        if (IsAKeyDown && !IsInAir)
+        if (IsAKeyDown && !IsInAir && Character.velocity.x > -MaxSpeed)
         {
             Character.AddForce(Vector2.left * SpeedForceMultiplier, ForceMode2D.Force);
         }
