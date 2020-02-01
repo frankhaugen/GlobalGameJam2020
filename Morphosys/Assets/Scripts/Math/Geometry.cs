@@ -30,4 +30,11 @@ static class Geometry
         var z = Mathf.Pow(origin.z - destination.z, 2);
         return Mathf.Sqrt(x + y + z);
     }
+
+    public static float EuclideanDistance2D(Vector2 origin, Vector2 destination)
+    {
+        var x = Mathf.Pow(origin.x - destination.x, 2);
+        var y = Mathf.Pow(origin.y - destination.y, 2);
+        return Mathf.Sqrt(x + y);
+    }
 }

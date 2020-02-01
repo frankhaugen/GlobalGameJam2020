@@ -8,6 +8,8 @@ public class BasicCharacterMovement : MonoBehaviour
     [ReadOnly] public bool IsAttacking;
     [ReadOnly] public bool IsJumping;
     [ReadOnly] public bool IsInAir;
+    //[ReadOnly] public DpadControl Dpad;
+    [ReadOnly] public Vector2 DpadValue;
 
     private Rigidbody2D Character;
 
