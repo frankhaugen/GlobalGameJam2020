@@ -11,14 +11,14 @@ public class BasicCharacterMovement : MonoBehaviour
 
     private Rigidbody2D Character;
 
-    [Range(1.0f, 10.0f)]
-    public float AttackForceMultiplier;
+    [Range(10.0f, 100.0f)]
+    public float AttackForceMultiplier = 10.0f;
 
-    [Range(1.0f, 10.0f)]
-    public float SpeedForceMultiplier;
+    [Range(10.0f, 100.0f)]
+    public float SpeedForceMultiplier = 10.0f;
 
-    [Range(1.0f, 10.0f)]
-    public float JumpForceMultiplier;
+    [Range(10.0f, 100.0f)]
+    public float JumpForceMultiplier = 10.0f;
 
     private void Start()
     {
@@ -62,24 +62,19 @@ public class BasicCharacterMovement : MonoBehaviour
         if (IsDKeyDown && !IsInAir)
         {
             Character.AddForce(Vector2.right * SpeedForceMultiplier, ForceMode2D.Force);
-            //transform.Translate(Vector2.right * Time.deltaTime * SpeedMultiplier);
         }
         if (IsAKeyDown && !IsInAir)
         {
             Character.AddForce(Vector2.left * SpeedForceMultiplier, ForceMode2D.Force);
-            //transform.Translate(Vector2.left * Time.deltaTime * SpeedMultiplier);
         }
         if (IsAttacking)
         {
             Character.AddForce(Vector2.down * AttackForceMultiplier, ForceMode2D.Impulse);
             IsAttacking = false;
-            //transform.Translate(Vector2.left * Time.deltaTime * SpeedMultiplier);
         }
         if (IsJumping && !IsInAir)
         {
             Character.AddForce(Vector2.up * JumpForceMultiplier, ForceMode2D.Impulse);
-            //transform.Translate(Time.deltaTime * 50f * Vector2.up);
-            //GetComponent<Rigidbody2D>().MovePosition(Vector2.up * Time.deltaTime);
             IsJumping = false;
         }
     }
