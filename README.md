@@ -1,4 +1,4 @@
-![Logo](https://github.com/frankhaugen/GlobalGameJam2020/blob/master/Graphics/logo%20draft.png)
+![Logo](https://github.com/frankhaugen/GlobalGameJam2020/blob/master/Graphics/MorphoSys%20Main%20Menu.png)
 
 # Concept
 Elements
