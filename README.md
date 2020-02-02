@@ -1,3 +1,5 @@
+![Logo](https://github.com/frankhaugen/GlobalGameJam2020/blob/master/Graphics/logo%20draft.png)
+
 # Concept
 Elements
 - Repair
