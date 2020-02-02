@@ -3,13 +3,13 @@ using UnityEngine.InputSystem;
 
 public class BasicCharacterMovement : MonoBehaviour
 {
-    [ReadOnly] public bool IsDKeyDown;
-    [ReadOnly] public bool IsAKeyDown;
-    [ReadOnly] public bool IsAttacking;
-    [ReadOnly] public bool IsJumping;
-    [ReadOnly] public bool IsInAir;
-    //[ReadOnly] public DpadControl Dpad;
-    [ReadOnly] public Vector2 DpadValue;
+    public bool IsDKeyDown;
+    public bool IsAKeyDown;
+    public bool IsAttacking;
+    public bool IsJumping;
+    public bool IsInAir;
+    //public DpadControl Dpad;
+    public Vector2 DpadValue;
 
     private Rigidbody2D Character;
 

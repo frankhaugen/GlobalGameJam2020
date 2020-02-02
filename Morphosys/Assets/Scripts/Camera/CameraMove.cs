@@ -13,7 +13,7 @@ public class CameraMove : MonoBehaviour
 
     [Range(0.1f, 1.0f)] public float Smoothing = 0.1f;
 
-    [ReadOnly] Vector3 Velocity;
+    Vector3 Velocity;
     
     void Update()
     {

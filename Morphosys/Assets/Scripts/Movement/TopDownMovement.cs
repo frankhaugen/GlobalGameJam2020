@@ -3,10 +3,10 @@ using UnityEngine.InputSystem;
 
 public class TopDownMovement : MonoBehaviour
 {
-    [ReadOnly] public bool IsDKeyDown;
-    [ReadOnly] public bool IsAKeyDown;
-    [ReadOnly] public bool IsWKeyDown;
-    [ReadOnly] public bool IsSKeyDown;
+    public bool IsDKeyDown;
+    public bool IsAKeyDown;
+    public bool IsWKeyDown;
+    public bool IsSKeyDown;
 
     [Range(1.0f, 10.0f)] public float TurnMultiplier = 1.0f;
 
