@@ -2675,6 +2675,7 @@ GameObject:
   - component: {fileID: 2070283788}
   - component: {fileID: 2070283789}
   - component: {fileID: 2070283790}
+  - component: {fileID: 2070283791}
   m_Layer: 0
   m_Name: officer_walk_strip_0
   m_TagString: Untagged
@@ -2817,6 +2818,7 @@ MonoBehaviour:
   IsAKeyDown: 0
   IsWKeyDown: 0
   IsSKeyDown: 0
+  TurnMultiplier: 6.95
 --- !u!50 &2070283790
 Rigidbody2D:
   serializedVersion: 4
@@ -2838,6 +2840,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 2
+--- !u!114 &2070283791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070283784}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c72c847f45e6141951fab6698554c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runSpeed: 20
 --- !u!1 &2115916426
 GameObject:
   m_ObjectHideFlags: 0
