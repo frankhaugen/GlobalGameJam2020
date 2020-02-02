@@ -1,49 +1,37 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using DG.Tweening;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CutScene : MonoBehaviour
 {
-    float FixedCount;
-    private int Count;
+    private AudioSource AudioSource;
+
     public List<SpriteRenderer> Sprites;
-    
 
-    private void Awake()
-    {
-        Sprites.ForEach(s => s.color += new Color(0, 0, 0, 0.0f));
-    }
+    [Range(1.0f, 10.0f)] public float FadeOutTime = 1.0f;
+    [Range(1.0f, 100.0f)] public float AudioFadeTime = 1.0f;
+    [Range(1.0f, 10.0f)] public float WaitForSeconds = 1.0f;
 
-    // Start is called before the first frame update
+
     void Start()
     {
-        Sprites.FirstOrDefault().color += new Color(0, 0, 0, 1.0f);
-        FixedCount = 0.0f;
-        Count = 0;
+        AudioSource = GetComponent<AudioSource>();
+        StartCoroutine(RunSequence());
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator RunSequence()
     {
-        
-    }
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        FixedCount += 0.02f;
-        if (FixedCount % 2 == 0)
+        AudioSource.Play();
+        AudioSource.volume = 0.0f;
+        AudioSource.DOFade(1.0f, AudioFadeTime);
+        foreach (var sprite in Sprites)
         {
-            Count++;
+            yield return new WaitForSeconds(WaitForSeconds);
+            sprite.DOFade(0f, FadeOutTime);
         }
-
-        if (Count == 10)
-        {
-            
-        }
-        if (Count == 10)
-        {
-            
-        }
+        AudioSource.DOFade(0.0f, WaitForSeconds);
+        yield return new WaitForSeconds(WaitForSeconds);
+        //SceneManager.LoadScene("");
     }
 }
